@@ -40,7 +40,7 @@ const BlogCard1 = ({title, shortdescription, image, id, show_desc, categories}: 
                     <p className='text-sm'>Sep 10, 2025</p>
                 </div>
                 {/* <Link href={'/'} className={badgeVariants({variant:'light'})}>Travel</Link> */}
-                { categories && <CategoryLink title={categories[0].attributes.title}/>}
+                { categories && <CategoryLink title={categories?.[0]?.attributes?.title}/>}
             </div>
         </Link>
 

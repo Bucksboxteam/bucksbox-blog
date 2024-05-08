@@ -1,17 +1,14 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
-type Props = {}
+type Props = {
+  body: string | null
+}
 
-const BlogBody = (props: Props) => {
+const BlogBody = ({body}: Props) => {
   return (
     <div className='prose'>
-        <h1 className='titles'>Hello World</h1>
-        <ol>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ol>
-        
+        <ReactMarkdown children={body}/>
     </div>
   )
 }

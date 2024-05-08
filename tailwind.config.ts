@@ -19,6 +19,13 @@ const config = {
     },
     extend: {
       colors: {
+        typography: {
+          DEFAULT: {
+            css: {
+              maxWidth: '100ch', // add required value here
+            }
+          }
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

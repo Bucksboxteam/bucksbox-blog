@@ -39,6 +39,7 @@ export type Blog = {
     blog_categories?: {
       data: Category[];
     };
+    blog_body?:string
   };
 };
 

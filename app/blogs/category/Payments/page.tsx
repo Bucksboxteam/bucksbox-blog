@@ -25,7 +25,7 @@ const page = async({params, searchParams}: Props) => {
             <div className='lg:w-[60%] w-[95%] mx-auto my-10'>
                 <section className='grid lg:grid-cols-2 grid-cols-1 gap-10'>
                     <div className='lg:col-span-2 '>
-                        {blogs && <BlogCard1 title={blogs[0]?.attributes.title} show_desc={true} image={blogs[0].attributes.image?.data[0].attributes.formats?.large?.url} id={blogs[0].id} key={blogs[0]?.id} shortdescription={blogs[0].attributes.shortdescription} />}
+                        {blogs && <BlogCard1 title={blogs?.[0]?.attributes.title} show_desc={true} image={blogs?.[0]?.attributes.image?.data[0].attributes.formats?.large?.url} id={blogs[0]?.id} key={blogs[0]?.id} shortdescription={blogs[0]?.attributes.shortdescription} />}
                     </div>
                     {
                         blogs && blogs?.slice(1).map(b => <BlogCard1 key={b.id} show_desc={true} id={b.id} title={b.attributes.title} image={b.attributes.image?.data[0].attributes.formats?.large?.url} shortdescription={b.attributes.shortdescription} />)
